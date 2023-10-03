@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  background: #003a6c;
+}
+
 td {
   width: 100%;
 }

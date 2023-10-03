@@ -11,19 +11,19 @@ const formValuesDefault = {
 
 const tableDataDefault = [
   {
-    courseNumber: 100,
+    courseNumber: "100A",
     courseName: "Course 1",
     units: 5,
     grade: "A",
   },
   {
-    courseNumber: 600,
+    courseNumber: "600A",
     courseName: "Course 2",
     units: 10,
     grade: "C+",
   },
   {
-    courseNumber: 600,
+    courseNumber: "600B",
     courseName: "Course 2",
     units: 10,
     grade: "F",
@@ -49,13 +49,22 @@ function App() {
   };
 
   return (
-    <div className="bg-regal-blue-950 text-white h-screen">
-      <Form
-        formValues={formValues}
-        handleInputChange={handleFormInputChange}
-        handleSubmit={handleFormSubmit}
-      />
-      <Table data={tableData} />
+    <div className="bg-regal-blue-950 text-white lg:px-5">
+      <div className="flex justify-center my-10">
+        <h1 className="font-bold text-2xl">Your Grades</h1>
+      </div>
+      <div className="flex flex-col gap-2 lg:flex-row">
+        <div className="flex justify-center lg:justify-left h-fit">
+          <Form
+            formValues={formValues}
+            handleInputChange={handleFormInputChange}
+            handleSubmit={handleFormSubmit}
+          />
+        </div>
+        <div className="w-full">
+          <Table data={tableData} />
+        </div>
+      </div>
     </div>
   );
 }

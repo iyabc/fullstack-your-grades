@@ -7,7 +7,7 @@ const FormInputBox = ({ id, type, label, value, handleChange }) => {
         type={type}
         value={value}
         onChange={handleChange}
-        className="border-b-2 px-1 border-regal-blue-800 outline-none bg-transparent focus:bg-rose-300 duration-500 ease-in-out"
+        className="border-b-2 px-1 border-regal-blue-800 outline-none bg-transparent focus:bg-gray-400/50 duration-500 ease-in-out"
       />
     </div>
   );

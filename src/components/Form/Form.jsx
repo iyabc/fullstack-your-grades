@@ -5,7 +5,7 @@ import FormRadioButton from "./FormRadioButton";
 const Form = ({ formValues, handleInputChange, handleSubmit }) => {
   return (
     <form
-      className="bg-deep-koamaru-700 w-fit p-5"
+      className="bg-regal-blue-900/50 rounded w-fit p-5"
       onSubmit={(e) => handleSubmit(e)}>
       <FormInputBox
         label="Course Number"

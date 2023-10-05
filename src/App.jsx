@@ -24,8 +24,8 @@ const tableDataDefault = [
   },
   {
     courseNumber: "600B",
-    courseName: "Course 2",
-    units: 10,
+    courseName: "Course 3",
+    units: 15,
     grade: "F",
   },
 ];

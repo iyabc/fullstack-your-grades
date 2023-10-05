@@ -84,20 +84,18 @@ const Table = ({ data }) => {
             })}
           </th>
           <tbody>
-            {query
-              ? filteredData
-              : data.map((item, index) => {
-                  return (
-                    <tr
-                      key={index}
-                      className={`flex justify-between text-center ${index % 2 ? "bg-gray-200/20" : "bg-gray-400/50"}`}>
-                      <td>{item.courseNumber}</td>
-                      <td>{item.courseName}</td>
-                      <td>{item.units}</td>
-                      <td>{item.grade}</td>
-                    </tr>
-                  );
-                })}
+            {(query != "" ? filteredData : data).map((item, index) => {
+              return (
+                <tr
+                  key={index}
+                  className={`flex justify-between text-center ${index % 2 ? "bg-gray-200/20" : "bg-gray-400/50"}`}>
+                  <td>{item.courseNumber}</td>
+                  <td>{item.courseName}</td>
+                  <td>{item.units}</td>
+                  <td>{item.grade}</td>
+                </tr>
+              );
+            })}
           </tbody>
         </table>
         <div className=" w-full text-right bg-regal-blue-100/50 absolute bottom-0 px-3 py-1 rounded-b z-10">
